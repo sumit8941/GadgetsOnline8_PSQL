@@ -11,7 +11,7 @@
             "image": "<IMAGE1_NAME>",
             "portMappings": [
                 {
-                    "containerPort": 80,
+                    "containerPort": 81,
                     "protocol": "tcp"
                 }
             ],
