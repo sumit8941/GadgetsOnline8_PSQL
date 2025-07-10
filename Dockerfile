@@ -26,4 +26,4 @@ RUN dotnet publish "./GadgetsOnline.csproj" -c $BUILD_CONFIGURATION -o /app/publ
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "GadgetsOnline.dll"]
+ENTRYPOINT []
