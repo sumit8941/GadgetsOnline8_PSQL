@@ -7,8 +7,8 @@
     "executionRoleArn": "${TASK_ROLE_ARN}",
     "containerDefinitions": [
         {
-            "name": "${APP_NAME}",
-            "image": "<IMAGE_NAME>",
+            "name": "app",
+            "image": "<IMAGE1_NAME>",
             "portMappings": [
                 {
                     "containerPort": 8080,
