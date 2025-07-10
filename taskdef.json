@@ -1,5 +1,5 @@
 {
-    "family": "${APP_NAME}",
+    "family": "dgadgetsonl0524d9e86d209453542a2",
     "networkMode": "awsvpc",
     "requiresCompatibilities": ["FARGATE"],
     "cpu": "256",
