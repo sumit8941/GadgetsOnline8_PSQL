@@ -2,7 +2,7 @@
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 # Create required directories and set permissions
-RUN mkdir -p /application_transformation_service_sync_files /var/scratch && \
+RUN mkdir -p /application_transformation_service_sync_files /var/scratch /app && \
     chmod 777 /application_transformation_service_sync_files && \
     chmod 777 /var/scratch && \
     chmod 777 /app
@@ -26,5 +26,7 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 # Ensure all application files are accessible
-RUN chmod -R 777 /app
+RUN chmod -R 777 . && \
+    chmod -R 777 /application_transformation_service_sync_files && \
+    chmod -R 777 /var/scratch
 ENTRYPOINT ["dotnet", "GadgetsOnline.dll"]
