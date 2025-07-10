@@ -2,7 +2,6 @@
 
 # This stage is used when running from VS in fast mode (Default for Debug configuration)
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER app
 WORKDIR /app
 EXPOSE 81
 
@@ -26,4 +25,8 @@ RUN dotnet publish "./GadgetsOnline.csproj" -c $BUILD_CONFIGURATION -o /app/publ
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+# Set the appropriate permissions
+RUN chown -R app:app /app
+# Switch to non-root user after setting permissions
+USER app
 ENTRYPOINT ["dotnet", "GadgetsOnline.dll"]
