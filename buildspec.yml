@@ -23,10 +23,6 @@ phases:
       - printf '[{"name":"gadgets-online-app","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
   files:
-    - '**/*'
-    - imagedefinitions.json
     - imageDetail.json
     - appspec.yaml
     - taskdef.json
-  name: artifact-name
-  discard-paths: no
