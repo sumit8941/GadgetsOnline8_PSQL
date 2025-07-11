@@ -4,7 +4,7 @@
     "requiresCompatibilities": ["FARGATE"],
     "cpu": "256",
     "memory": "512",
-    "executionRoleArn": "${TASK_ROLE_ARN}",
+    "executionRoleArn": "arn:aws:iam::341276752816:role/refactoringtoolkit-ECSTaskExecutionRole",
     "containerDefinitions": [
         {
             "name": "app",
