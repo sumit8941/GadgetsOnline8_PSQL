@@ -21,10 +21,12 @@ phases:
       - echo Writing artifacts...
       - printf '{"ImageURI":"%s"}' $REPOSITORY_URI:$IMAGE_TAG > imageDetail.json
       - printf '[{"name":"gadgets-online-app","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
-
 artifacts:
-  files: 
+  files:
+    - '**/*'
     - imagedefinitions.json
     - imageDetail.json
     - appspec.yaml
     - taskdef.json
+  name: artifact-name
+  discard-paths: no
