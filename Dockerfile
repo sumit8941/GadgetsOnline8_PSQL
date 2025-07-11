@@ -29,4 +29,5 @@ COPY --from=publish /app/publish .
 RUN mkdir -p /application_transformation_service_sync_files && \
     chmod -R 755 /application_transformation_service_sync_files && \
     chmod -R 755 /app
+# This is a demo
 ENTRYPOINT ["dotnet", "GadgetsOnline.dll"]
