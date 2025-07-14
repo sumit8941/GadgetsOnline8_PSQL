@@ -25,7 +25,7 @@ phases:
       - echo "Contents of imagedefinitions.json:"
       - cat imagedefinitions.json
       - echo Writing appspec.yml for CodeDeploy...
-      - printf 'version: 0.0\nResources:\n  - TargetService:\n      Type: AWS::ECS::Service\n      Properties:\n        TaskDefinition: <TASK_DEFINITION>\n        LoadBalancerInfo:\n          ContainerName: "app"\n          ContainerPort: 8080\n        PlatformVersion: "LATEST"\n' > appspec.yml
+      - 'printf "version: 0.0\nResources:\n  - TargetService:\n      Type: AWS::ECS::Service\n      Properties:\n        TaskDefinition: <TASK_DEFINITION>\n        LoadBalancerInfo:\n          ContainerName: app\n          ContainerPort: 8080\n        PlatformVersion: LATEST\n" > appspec.yml'
       - echo "Contents of appspec.yml:"
       - cat appspec.yml
       - echo "Build completed successfully"
