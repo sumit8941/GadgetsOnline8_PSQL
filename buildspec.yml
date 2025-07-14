@@ -24,7 +24,7 @@ phases:
 artifacts:
   files:
     - imageDetail.json
-    - appspec.yaml
+    - appspec.yml
     - taskdef.json
   base-directory: .
   name: build-artifacts
