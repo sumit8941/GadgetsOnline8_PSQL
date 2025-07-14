@@ -26,3 +26,5 @@ artifacts:
     - imageDetail.json
     - appspec.yaml
     - taskdef.json
+  base-directory: .
+  name: build-artifacts
