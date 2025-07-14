@@ -1,10 +1,10 @@
 {
-    "family": "dgadgetsonl0524d9e86d209453542a2",
+    "family": "gadgetsonline-task",
     "networkMode": "awsvpc",
-    "requiresCompatibilities": ["FARGATE"],
+    "requiresCompatibilities": ["EC2","FARGATE"],
     "cpu": "256",
     "memory": "512",
-    "executionRoleArn": "arn:aws:iam::341276752816:role/refactoringtoolkit-ECSTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::717279688499:role/gadgetsonline-ecs-task-execution-role",
     "containerDefinitions": [
         {
             "name": "app",
